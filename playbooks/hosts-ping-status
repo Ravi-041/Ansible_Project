@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Make sure all nodes are accessible
+      ping:
+    - name: install PHP
+      apt: name=apache2 state=absent update_cache=yes
